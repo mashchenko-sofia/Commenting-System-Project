@@ -1,0 +1,10 @@
+:root {
+    --mock-color: #D9D9D9;
+    --main-font-color: #000000;
+    --accent-color-1: #8AC540;
+    --accent-color-2: #FF0000;
+    --nicknames-color: #122AC0;
+
+    --main-elements-opacity: 0.4;
+    --main-elements-shadow: 0px 0px 10px 0px #00000033;
+}

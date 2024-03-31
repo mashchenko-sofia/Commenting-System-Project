@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Commenting system</title>
+</head>
+
+<body class="body">
+    <div class="container">
+
+        <header class="header">
+        </header>
+
+        <aside class="sidebar">
+        </aside>
+
+        <main class="main">
+            <section class="content">
+                <div class="articles">
+                    <article class="article"></article>
+                    <article class="article"></article>
+                    <article class="article"></article>
+                    <article class="article"></article>
+                    <article class="article"></article>
+                    <article class="article"></article>
+                    <article class="article"></article>
+                    <article class="article"></article>
+                </div>
+                <footer class="content__footer"></footer>
+            </section>
+
+            <section class="comments">
+                <header class="comments__header">
+                    <button class="button comments__show-button">Комментарии 
+                        <span id="comments-count" class="comments__counter"></span>
+                    </button>
+                    <form class="comments__sort-form">
+                        <select name='sort'>
+                            <option value='date'>По дате</option>
+                            <option value='ratings-rate'>По количеству оценок</option>
+                            <option value='relevance'>По актуальности</option>
+                            <option value='response-rate'>По количеству ответов</option>
+                        </select>
+                    </form>
+                    <button class="button comments__favorites-button">Избранное
+                        <img src="" alt="">
+                    </button>
+                </header>
+                <div class="comments__body">
+                    <form action="" class="comment-form">
+                        <img src="./imgs/avatar.svg" alt="" class="avatar-icon">
+                        <div class="comment-form__content">
+                            <div class="comment-form__info">
+                                <h3 class="avatar-name">Your Name</h3>
+                                <span class="words-counter">Макс. 1000 символов</span>
+                            </div>
+                            <!-- <div class="comment-form__input"> -->
+                                <textarea class="textarea" type="text" placeholder="Введите текст сообщения..."></textarea>
+                            <!-- </div> -->
+                        </div>
+                        <button class="button comment-form__submit-button">Отправить</button>
+                    </form>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+    <script type="module" src="./script/main.ts"></script>
+</body>
+
+</html>

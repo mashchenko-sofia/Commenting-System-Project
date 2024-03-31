@@ -1,0 +1,28 @@
+.body {
+    color: var( --main-font-color);
+}
+
+.header, .sidebar, .article, .content__footer {
+    background-color: var(--mock-color);
+}
+.comments {
+    border-top: 3px solid var(--mock-color);
+    padding-top: 20px;
+}
+
+.textarea {
+    box-shadow: var(--main-elements-shadow);
+}
+.avatar-name {
+    color: var(--nicknames-color);
+}
+
+.comments__counter, .comments__filter-form, 
+.comments__favorites-button, .words-counter,
+.comment-form__submit-button {
+    opacity: var(--main-elements-opacity);
+}
+.comment-form__submit-button {
+    background-color: var(--mock-color);
+}
+

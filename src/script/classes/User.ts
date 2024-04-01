@@ -1,11 +1,24 @@
+import { UserType } from "../types";
 export class User {
-    public icon: string
-    public nickname: string;
-    public id: number;
+    private newUser: UserType;
+    private users: UserType[] = [];
 
-    public create(icon: string, nickname: string) {
-        this.icon = icon;
-        this.nickname = nickname;
-        this.id = Number(Math.random() * 1000000);
+    constructor(icon: string, nickname: string) {
+        this.newUser = {
+            icon: icon,
+            nickName: nickname,
+            id: Number(Math.random() * 1000000),
+        }
+        this.users.push(this.newUser);
+        this.save(this.users);
     }   
+    private save(users: UserType[]) {
+        localStorage.setItem('users', JSON.stringify(users));
+    }
+    public getIcon() {
+        return this.newUser.icon;
+    }
+    public getNickname() {
+        return this.newUser.nickName;
+    }
 }

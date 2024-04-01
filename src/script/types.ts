@@ -1,6 +1,6 @@
 export interface CommentType {
     icon: string;
-    user: string;
+    nickName: string;
     day: number;
     month: number;
     hours: number;
@@ -12,7 +12,7 @@ export interface CommentType {
 }
 export interface AnswerType {
     icon: string;
-    user: string;
+    nickName: string;
     day: number;
     month: number;
     hours: number;
@@ -21,7 +21,8 @@ export interface AnswerType {
     isFavorite: boolean;
     rating: number;
 }
-// interface UserType {
-//     getIcon(): string;
-//     getNickname(): string;
-// }
+export interface UserType {
+    icon: string;
+    nickName: string;
+    id: number;
+}

@@ -1,9 +1,11 @@
 import { AnswerType } from "../types";
 export class Answer {
-    public create(text: string, user) {
-        const newAnswer: AnswerType = {
+    private newAnswer: AnswerType;
+    private answers: AnswerType[] = [];
+    constructor(text: string, user: any, parentElement: Element) {
+        this.newAnswer = {
             icon: user.getIcon(),
-            user: user.getNickname(),
+            nickName: user.getNickname(),
             day: new Date().getDate(),
             month: new Date().getMonth() + 1,
             hours: new Date().getHours(),
@@ -12,11 +14,11 @@ export class Answer {
             isFavorite: false,
             rating: 0,
         }
+        this.addToDOM(this.newAnswer, parentElement);
 
-        this.addToDOM(newAnswer);
+        this.answers.push(this.newAnswer);
     }
-    private addToDOM(answer: AnswerType) {
-        const commentsBody = document.querySelector('.comments__body') as HTMLElement;
+    private addToDOM(answer: AnswerType, parentElement: Element): void {
         const newAnswerElement = document.createElement('div');
         newAnswerElement.classList.add('comment');
 
@@ -26,7 +28,7 @@ export class Answer {
 
         const userNameElement = document.createElement('h3');
         userNameElement.classList.add('avatar-name');
-        userNameElement.textContent = answer.user;
+        userNameElement.textContent = answer.nickName;
 
         const dateElement = document.createElement('span');
         dateElement.classList.add('date');
@@ -41,6 +43,6 @@ export class Answer {
         newAnswerElement.appendChild(dateElement);
         newAnswerElement.appendChild(textElement);
 
-        commentsBody.appendChild(newAnswerElement);
+        parentElement.appendChild(newAnswerElement);
     }
 }

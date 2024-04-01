@@ -9,7 +9,7 @@
 </head>
 
 <body class="body">
-    <div class="container">
+    <div class="body__container">
 
         <header class="header">
         </header>
@@ -34,34 +34,32 @@
 
             <section class="comments">
                 <header class="comments__header">
-                    <button class="button comments__show-button">Комментарии 
-                        <span id="comments-count" class="comments__counter"></span>
+                    <button class="button show-button">Комментарии 
+                        <span id="comments__counter" class="comments__counter"></span>
                     </button>
-                    <form class="comments__sort-form">
-                        <select name='sort'>
-                            <option value='date'>По дате</option>
-                            <option value='ratings-rate'>По количеству оценок</option>
-                            <option value='relevance'>По актуальности</option>
-                            <option value='response-rate'>По количеству ответов</option>
+                    <!-- <form class="comments__sort-form"> -->
+                        <select name='comments__sorter'>
+                            <option class="comments__sorter-item" value='date'>По дате</option>
+                            <option class="comments__sorter-item" value='ratings-rate'>По количеству оценок</option>
+                            <option class="comments__sorter-item" value='relevance'>По актуальности</option>
+                            <option class="comments__sorter-item" value='response-rate'>По количеству ответов</option>
                         </select>
-                    </form>
-                    <button class="button comments__favorites-button">Избранное
+                    <!-- </form> -->
+                    <button class="button favorites-button">Избранное
                         <img src="" alt="">
                     </button>
                 </header>
                 <div class="comments__body">
-                    <form action="" class="comment-form">
-                        <img src="./imgs/avatar.svg" alt="" class="avatar-icon">
-                        <div class="comment-form__content">
-                            <div class="comment-form__info">
-                                <h3 class="avatar-name">Your Name</h3>
-                                <span class="words-counter">Макс. 1000 символов</span>
+                    <form class="template">
+                        <img src="./imgs/avatar.svg" alt="" class="template__icon">
+                        <div class="template__content">
+                            <div class="template__info">
+                                <h3 class="template__nickName">Your Name</h3>
+                                <span id="words-counter" class="template__words-counter" >Макс. 1000 символов</span>
                             </div>
-                            <!-- <div class="comment-form__input"> -->
-                                <textarea class="textarea" type="text" placeholder="Введите текст сообщения..."></textarea>
-                            <!-- </div> -->
+                                <textarea class="template__input" type="text" placeholder="Введите текст сообщения..."></textarea>
                         </div>
-                        <button class="button comment-form__submit-button">Отправить</button>
+                        <button id="submit-button" type="submit"  class="button template__button">Отправить</button>
                     </form>
                 </div>
             </section>

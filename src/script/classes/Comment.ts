@@ -1,9 +1,12 @@
 import { CommentType} from "../types";
+
 export class Comment {
-    public create(text: string, user) {
-        const newComment: CommentType = {
+    private newComment: CommentType;
+    private comments: CommentType[] = [];
+    constructor(text: string, user: any) {
+        this.newComment = {
             icon: user.getIcon(),
-            user: user.getNickname(),
+            nickName: user.getNickname(),
             day: new Date().getDate(),
             month: new Date().getMonth() + 1,
             hours: new Date().getHours(),
@@ -14,10 +17,14 @@ export class Comment {
             answers: [],
         }
 
-        this.addToDOM(newComment);
+        this.addToDOM(this.newComment);
+
+        this.comments.push(this.newComment);
+        this.saveComment(this.comments);
     }
+   
     private addToDOM(comment: CommentType) {
-        const commentsBody = document.querySelector('.comments__body') as HTMLElement;
+        const parentElement = document.querySelector('.comments__body') as HTMLElement;
         const newCommentElement = document.createElement('div');
         newCommentElement.classList.add('comment');
 
@@ -27,7 +34,7 @@ export class Comment {
 
         const userNameElement = document.createElement('h3');
         userNameElement.classList.add('avatar-name');
-        userNameElement.textContent = comment.user;
+        userNameElement.textContent = comment.nickName;
 
         const dateElement = document.createElement('span');
         dateElement.classList.add('date');
@@ -42,6 +49,9 @@ export class Comment {
         newCommentElement.appendChild(dateElement);
         newCommentElement.appendChild(textElement);
 
-        commentsBody.appendChild(newCommentElement);
+        parentElement.appendChild(newCommentElement);
+    }
+    private saveComment(comments: CommentType[]) {
+        localStorage.setItem('comments', JSON.stringify(comments));
     }
 }

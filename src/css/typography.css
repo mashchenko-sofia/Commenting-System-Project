@@ -1,10 +1,6 @@
 .body {
     font-family: "Inter", sans-serif;
 }
-/* font-size: 18px;
-font-weight: 400;
-line-height: 21.78px; */
-
 .comments__show-button {
     font-size: 20px;
     font-weight: 500;
@@ -12,18 +8,13 @@ line-height: 21.78px; */
 
     /* text-decoration: underline; */
 }
-
-.comments__filter-form, .comments__favorites-button {
+.comments__sorter, .comments__favorites-button {
     font-size: 16px;
     font-weight: 400;
     line-height: 19.36px;
     /* text-decoration: underline; */
-
 }
-
-
-
-.comment-form__submit-button {
+.template__submit-button {
     font-size: 18px;
     font-weight: 400;
     line-height: 21.78px;

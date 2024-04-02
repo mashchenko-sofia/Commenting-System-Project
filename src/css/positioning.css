@@ -1,4 +1,4 @@
-.container {
+.body__container {
     display: grid;
     grid-template-rows: 1fr 10fr;
     grid-template-columns: 1.4fr 10fr;
@@ -18,19 +18,17 @@
 
 
 
-.main, .content, .conmments {
+.main, .content, .comments {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
-
-
-
 .articles {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
 }
+
 
 
 .comments {
@@ -44,12 +42,15 @@
     column-gap: 50px;
     row-gap: 20px;
 }
-.comment-form, .comment-form__info {
+
+
+
+.template, .template__info {
     display: flex;
     justify-content: space-between;
     gap: 30px;
 }
-.comment-form__content {
+.template__content {
     display: flex;
     flex-direction: column;
     gap: 15px;

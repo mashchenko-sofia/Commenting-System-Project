@@ -8,6 +8,6 @@
 @import url(./colors.css);
 @import url(./typography.css);
 
-.textarea {
+.template__input {
     resize: none;
 }

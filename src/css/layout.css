@@ -1,12 +1,12 @@
+.body__container {
+    width: 100vw;
+    height: 100vh;
+}
 .header {
     /* width: 100vw;
     height: 7vh; */
     min-height: 68px;
     margin-bottom: 5vh;
-}
-.container {
-    width: 100vw;
-    height: 100vh;
 }
 /* .aside {
     width: 14vw;
@@ -21,6 +21,10 @@
 
 
 
+.content__footer {
+    width: 100%;
+    min-height: 132px;
+}
 .article {
     min-height: 61px;
     /* max-width: 487px; */
@@ -29,21 +33,17 @@
 
 
 
-.content__footer {
-    width: 100%;
-    min-height: 132px;
-}
 
-.comment-form__content {
+.template__content {
     width: 100%; /* не влипает в другие элементы, 
     потому что в .comment-form есть gap*/
 }
 
-.comment-form__submit-button {
+.template__submit-button {
     /* width: 100%; */
     border-radius: 5px;
 }
-.textarea {
+.template__input {
     width: 100%;
     min-height: 50px;
     padding: 10px;

@@ -1,4 +1,4 @@
-import { AnswerType } from "../types";
+import { AnswerType } from "../types.js";
 export class Answer {
     private newAnswer: AnswerType;
     private answers: AnswerType[] = [];
@@ -20,22 +20,22 @@ export class Answer {
     }
     private addToDOM(answer: AnswerType, parentElement: Element): void {
         const newAnswerElement = document.createElement('div');
-        newAnswerElement.classList.add('comment');
+        newAnswerElement.classList.add('comment__answer');
 
         const userIconElement = document.createElement('img');
-        userIconElement.classList.add('avatar-icon');
+        userIconElement.classList.add('comment__icon');
         userIconElement.src = answer.icon;
 
         const userNameElement = document.createElement('h3');
-        userNameElement.classList.add('avatar-name');
+        userNameElement.classList.add('comment__nickName');
         userNameElement.textContent = answer.nickName;
 
         const dateElement = document.createElement('span');
-        dateElement.classList.add('date');
+        dateElement.classList.add('comment__date');
         dateElement.textContent = `${answer.day}.${answer.month} ${answer.hours}:${answer.minutes}`;
 
         const textElement = document.createElement('p');
-        textElement.classList.add('comment-text');
+        textElement.classList.add('comment__text');
         textElement.textContent = answer.text;
 
         newAnswerElement.appendChild(userIconElement);

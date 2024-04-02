@@ -1,4 +1,4 @@
-import { CommentType} from "../types";
+import { CommentType} from "../types.js";
 
 export class Comment {
     private newComment: CommentType;
@@ -29,19 +29,19 @@ export class Comment {
         newCommentElement.classList.add('comment');
 
         const userIconElement = document.createElement('img');
-        userIconElement.classList.add('avatar-icon');
+        userIconElement.classList.add('comment__icon');
         userIconElement.src = comment.icon;
 
         const userNameElement = document.createElement('h3');
-        userNameElement.classList.add('avatar-name');
+        userNameElement.classList.add('comment__nickName');
         userNameElement.textContent = comment.nickName;
 
         const dateElement = document.createElement('span');
-        dateElement.classList.add('date');
+        dateElement.classList.add('comment__date');
         dateElement.textContent = `${comment.day}.${comment.month} ${comment.hours}:${comment.minutes}`;
 
         const textElement = document.createElement('p');
-        textElement.classList.add('comment-text');
+        textElement.classList.add('comment__text');
         textElement.textContent = comment.text;
 
         newCommentElement.appendChild(userIconElement);

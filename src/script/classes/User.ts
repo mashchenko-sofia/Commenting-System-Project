@@ -1,4 +1,4 @@
-import { UserType } from "../types";
+import { UserType } from "../types.js";
 export class User {
     private newUser: UserType;
     private users: UserType[] = [];

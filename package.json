@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "./node_modules/.bin/tsc --project ./tsconfig.json --watch",
+    "start": ""
   },
   "keywords": [],
-  "author": "",
+  "author": "MashchenkoSofia",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^5.4.3"

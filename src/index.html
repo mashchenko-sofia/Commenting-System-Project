@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/index.css">
     <title>Commenting system</title>
 </head>
 
@@ -34,7 +34,7 @@
 
             <section class="comments">
                 <header class="comments__header">
-                    <button class="button show-button">Комментарии 
+                    <button id="show-button" class="button comments__show-button">Комментарии 
                         <span id="comments__counter" class="comments__counter"></span>
                     </button>
                     <!-- <form class="comments__sort-form"> -->
@@ -45,7 +45,7 @@
                             <option class="comments__sorter-item" value='response-rate'>По количеству ответов</option>
                         </select>
                     <!-- </form> -->
-                    <button class="button favorites-button">Избранное
+                    <button id="favorites-button" class="button comments__favorites-button">Избранное
                         <img src="" alt="">
                     </button>
                 </header>
@@ -59,7 +59,7 @@
                             </div>
                                 <textarea class="template__input" type="text" placeholder="Введите текст сообщения..."></textarea>
                         </div>
-                        <button id="submit-button" type="submit"  class="button template__button">Отправить</button>
+                        <button id="submit-button" type="submit"  class="button template__submit-button">Отправить</button>
                     </form>
                 </div>
             </section>
@@ -67,7 +67,7 @@
         </main>
 
     </div>
-    <script type="module" src="./script/main.ts"></script>
+    <script type="module" src="./dist/index.js"></script>
 </body>
 
 </html>
